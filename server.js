@@ -4,9 +4,9 @@ const clientRouter = require('./routers/clients.js')
 const port = 7500
 
 
-app.use('/mannyshair', clientRouter)
 app.use(express.static('public'))
 app.set('view engine','ejs')
+app.use('/mannyshair', clientRouter)
 
 app.listen(process.env.PORT || port, console.log('server running on port',`${port}`))
 
