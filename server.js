@@ -1,14 +1,14 @@
 const express = require('express')
 const app = express()
 const clientRouter = require('./routers/clients.js')
-const PORT = 7500
+const port = 7500
 
 
 app.use('/mannyshair', clientRouter)
 app.use(express.static('public'))
 app.set('view engine','ejs')
 
-app.listen(PORT, console.log('server running on',`${PORT}`))
+app.listen(process.env.PORT || port, console.log('server running on port',`${port}`))
 
 app.get('/', (req, res) =>{
   const products =[ {
