@@ -1,10 +1,11 @@
 const express = require('express')
 const app = express()
+const path = require('path')
 const clientRouter = require('./routers/clients.js')
 const port = 9090
 
-
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname,"public")));
+// app.use(express.static('public'))
 app.set('view engine','ejs')
 app.use('/mannyshair', clientRouter)
 
