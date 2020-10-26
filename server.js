@@ -34,7 +34,7 @@ app.get('/shop', (req, res) => {
     product_price: '$5'
   }
 ]
-  res.render('product_list.ejs', {products, products})
+  res.render('productList.ejs', {products, products})
 })
 
 
