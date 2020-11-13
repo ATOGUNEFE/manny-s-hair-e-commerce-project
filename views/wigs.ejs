@@ -3,14 +3,18 @@
 <head>
 <title>Manny's Hair</title>
 <meta charset="utf-8">
-<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Little Closet template">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/flexslider/flexslider.css">
-<link rel="stylesheet" type="text/css" href="styles/product.css">
-<link rel="stylesheet" type="text/css" href="styles/product_responsive.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/category.css">
+<link rel="stylesheet" type="text/css" href="styles/category_responsive.css">
+<script src="js/addToCart.js"></script>
+<script src="js/storage.js"></script>
 </head>
 <body>
 
@@ -28,10 +32,10 @@
 	<!-- Navigation -->
 	<div class="menu_nav">
 		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/shop">Shop</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Contact</a></li>
+			<li><a href="/">HOME</a></li>
+			<li><a href="/shop">SHOP</a></li>
+			<li><a href="/wigs">WIGS</a></li>
+			<li><a href="#">CONTACT</a></li>
 		</ul>
 	</div>
 	<!-- Contact Info -->
@@ -71,7 +75,7 @@
 				<ul class="d-flex flex-row align-items-start justify-content-start">
 					<li class="active"><a href="#">HOME</a></li>
 					<li><a href="/shop">SHOP</a></li>
-					<li><a href="#">ABOUT</a></li>
+					<li><a href="/wigs">WIGS</a></li>
 					<!-- <li><a href="#">Home Deco</a></li> -->
 					<li><a href="#">Contact</a></li>
 				</ul>
@@ -87,7 +91,7 @@
 				<!-- User -->
 				<!-- <div class="user"><a href="#"><div><img src="images/user.svg" alt="https://www.flaticon.com/authors/freepik"><div>1</div></div></a></div> -->
 				<!-- Cart -->
-				<div class="cart"><a href="/cart"><div><img class="svg" src="images/cart.svg" alt="https://www.flaticon.com/authors/freepik"><div class="cart-items">1</div></div></a></div>
+				<div class="cart"><a href="/cart"><div><img class="svg" src="images/cart.svg" alt="https://www.flaticon.com/authors/freepik"><div class="cart-items numbers-of-items-in-cart">0</div></div></a></div>
 				<!-- Phone -->
 				<div class="header_phone d-flex flex-row align-items-center justify-content-start">
 					<div><div><img src="images/phone.svg" alt="https://www.flaticon.com/authors/freepik"></div></div>
@@ -105,149 +109,118 @@
 		<div class="home">
 			<div class="home_container d-flex flex-column align-items-center justify-content-end">
 				<div class="home_content text-center">
-					<div class="home_title">View Product</div>
+					<div class="home_title">our wigs</div>
 					<div class="breadcrumbs d-flex flex-column align-items-center justify-content-center">
 						<ul class="d-flex flex-row align-items-start justify-content-start text-center">
 							<li><a href="/">Home</a></li>
-							<li><a href="/shop">Products</a></li>
-							<!-- <li>New Products</li> -->
+							<!-- <li><a href="category.html">Woman</a></li> -->
+							<li>Wigs</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- Product -->
+		<!-- Products -->
 
-		<div class="product">
+		<div class="products">
 			<div class="container">
-				<div class="row">
-					
-					<!-- Product Image -->
-					<div class="col-lg-6">
-						<div class="product_image_slider_container">
-							<div id="slider" class="flexslider">
-								<ul class="slides">
-									<li>
-										<img src="e-commerce-image-assets/image-1.jpg" />
-									</li>
-									<li>
-										<img src="images/product_image_1.jpg" />
-									</li>
-									<li>
-										<img src="images/product_image_1.jpg" />
-									</li>
-									<li>
-										<img src="images/product_image_1.jpg" />
-									</li>
-									<li>
-										<img src="images/product_image_1.jpg" />
-									</li>
-									<li>
-										<img src="images/product_image_1.jpg" />
-									</li>
-									<li>
-										<img src="images/product_image_1.jpg" />
-									</li>
-									<li>
-										<img src="images/product_image_1.jpg" />
-									</li>
+				<div class="row products_bar_row">
+					<div class="col">
+						<div class="products_bar d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-start justify-content-center">
+							<div class="products_bar_links">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+									<li><a href="#">All</a></li>
+									<li><a href="#">Hot Products</a></li>
+									<li class="active"><a href="#">New Products</a></li>
+									<li><a href="#">Sale Products</a></li>
 								</ul>
 							</div>
-							<div class="carousel_container">
-								<div id="carousel" class="flexslider">
-									<ul class="slides">
-										<li>
-											<div><img src="images/product_1.jpg" /></div>
-										</li>
-										<li>
-											<div><img src="images/product_2.jpg" /></div>
-										</li>
-										<li>
-											<div><img src="images/product_3.jpg" /></div>
-										</li>
-										<li>
-											<div><img src="images/product_4.jpg" /></div>
-										</li>
-										<li>
-											<div><img src="images/product_5.jpg" /></div>
-										</li>
-										<li>
-											<div><img src="images/product_6.jpg" /></div>
-										</li>
-										<li>
-											<div><img src="images/product_7.jpg" /></div>
-										</li>
-										<li>
-											<div><img src="images/product_8.jpg" /></div>
-										</li>
+							<div class="products_bar_side d-flex flex-row align-items-center justify-content-start ml-lg-auto">
+								<div class="products_dropdown product_dropdown_sorting">
+									<div class="isotope_sorting_text"><span>Default Sorting</span><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+									<ul>
+										<li class="item_sorting_btn" data-isotope-option='{ "sortBy": "original-order" }'>Default</li>
+										<li class="item_sorting_btn" data-isotope-option='{ "sortBy": "price" }'>Price</li>
+										<li class="item_sorting_btn" data-isotope-option='{ "sortBy": "name" }'>Name</li>
 									</ul>
 								</div>
-								<div class="fs_prev fs_nav disabled"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
-								<div class="fs_next fs_nav"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Product Info -->
-					<div class="col-lg-6 product_col">
-						<div class="product_info">
-							<div class="product_name">Raw wave</div>
-							<div class="product_category">In <a href="/shop">Category</a></div>
-							<div class="product_rating_container d-flex flex-row align-items-center justify-content-start">
-								<div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
-							</div>
-							<div class="product_price">$3<span>.99</span></div>
-						
-							<div class="product_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec consequat lorem. Maecenas elementum at diam consequat bibendum. Mauris iaculis fringilla ex, sit amet semper libero facilisis sit amet. Nunc ut aliquet metus. Praesent pulvinar justo sed velit tempus bibendum. Quisque dictum lorem id mi viverra, in auctor justo laoreet. Nam at massa malesuada, ullamcorper metus vel, consequat risus. Phasellus ultricies velit vel accumsan porta.</p>
-							</div>
-							<div class="product_buttons">
-								<div class="text-right d-flex flex-row align-items-start justify-content-start">
-									<div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-										<div><div><img src="images/heart_2.svg" class="svg" alt=""><div>+</div></div></div>
-									</div>
-									<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-										<div><div><img src="images/cart.svg" class="svg" alt=""><div>+</div></div></div>
-									</div>
+								<div class="product_view d-flex flex-row align-items-center justify-content-start">
+									<div class="view_item active"><img src="images/view_1.png" alt=""></div>
+									<div class="view_item"><img src="images/view_2.png" alt=""></div>
+									<div class="view_item"><img src="images/view_3.png" alt=""></div>
+								</div>
+								<div class="products_dropdown text-right product_dropdown_filter">
+									<div class="isotope_filter_text"><span>Filter</span><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+									<ul>
+										<li class="item_filter_btn" data-filter="*">All</li>
+										<li class="item_filter_btn" data-filter=".hot">Hot</li>
+										<li class="item_filter_btn" data-filter=".new">New</li>
+										<li class="item_filter_btn" data-filter=".sale">Sale</li>
+									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-
-		<!-- Boxes -->
-
-		<div class="boxes">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="box d-flex flex-row align-items-center justify-content-start">
-							<div class="mt-auto"><div class="box_image"><img src="images/boxes_1.png" alt=""></div></div>
-							<div class="box_content">
-								<div class="box_title">Size Guide</div>
-								<div class="box_text">Phasellus sit amet nunc eros sed nec tellus.</div>
+				<div class="row products_row products_container grid">
+					
+          <!-- Product -->
+          <% products.forEach(product =>{ %>
+					<div class="col-xl-4 col-md-6 grid-item new">
+						<a href="/product">
+							<div class="product">
+								<div class="product_image"><img src="e-commerce-image-assets/<%= product.product_image %> " alt="">
+								</div>
+								<div class="product_content">
+									<div class="product_info d-flex flex-row align-items-start justify-content-start">
+										<div>
+											<div>
+												<div class="product_name"><a href="/product"><%= product.product_tittle %> </a></div>
+												<div class="product_category">In <a href="category.html">Category</a></div>
+											</div>
+										</div>
+										<div class="ml-auto text-right">
+											<div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="product_price text-right"><%= product.product_price %> <span>.99</span></div>
+										</div>
+									</div>
+									<div class="product_buttons">
+										<div class="text-right d-flex flex-row align-items-start justify-content-start">
+											<!-- <div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
+												<div><div><img src="images/heart_2.svg" class="svg" alt=""><div>+</div></div></div>
+											</div> -->
+											<div onclick="addToCart('<%= JSON.stringify(product) %>' )" class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center ">
+												<div><div><img src="images/cart.svg" class="svg" alt=""><div>+</div></div></div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-					<div class="col-lg-6 box_col">
-						<div class="box d-flex flex-row align-items-center justify-content-start">
-							<div class="mt-auto"><div class="box_image"><img src="images/boxes_2.png" alt=""></div></div>
-							<div class="box_content">
-								<div class="box_title">Shipping</div>
-								<div class="box_text">Phasellus sit amet nunc eros sed nec tellus.</div>
-							</div>
-						</div>
-					</div>
+
+					<!-- </div> -->
+            <% }) %> 
+
 				</div>
+				<!-- <div class="row page_nav_row">
+					<div class="col">
+						<div class="page_nav">
+							<ul class="d-flex flex-row align-items-start justify-content-center">
+								<li class="active"><a href="#">01</a></li>
+								<li><a href="#">02</a></li>
+								<li><a href="#">03</a></li>
+								<li><a href="#">04</a></li>
+							</ul>
+						</div>
+					</div>
+				</div> -->
 			</div>
 		</div>
 
 		<!-- Footer -->
-
-		<footer class="footer">
+    <footer class="footer">
 			<div class="footer_content">
 				<div class="container">
 					<div class="row">
@@ -344,7 +317,9 @@
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/progressbar/progressbar.min.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="plugins/flexslider/jquery.flexslider-min.js"></script>
-<script src="js/product.js"></script>
+<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="plugins/Isotope/fitcolumns.js"></script>
+<script src="js/category.js"></script>
+
 </body>
 </html>

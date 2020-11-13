@@ -30,8 +30,9 @@
 	<!-- Navigation -->
 	<div class="menu_nav">
 		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="#">About</a></li>
+			<li><a href="/">HOME</a></li>
+			<li><a href="/shop">SHOP</a></li>
+			<li><a href="/wigs">WIGS</a></li>
 			<li><a href="#">Contact</a></li>
 		</ul>
 	</div>
@@ -56,7 +57,7 @@
 
 	<!-- Header -->
 
-  <header class="header">
+	<header class="header">
 		<div class="header_overlay"></div>
 		<div class="header_content d-flex flex-row align-items-center justify-content-start">
 			<div class="logo">
@@ -72,7 +73,7 @@
 				<ul class="d-flex flex-row align-items-start justify-content-start">
 					<li class="active"><a href="#">HOME</a></li>
 					<li><a href="/shop">SHOP</a></li>
-					<li><a href="#">ABOUT</a></li>
+					<li><a href="/wigs">WIGS</a></li>
 					<!-- <li><a href="#">Home Deco</a></li> -->
 					<li><a href="#">Contact</a></li>
 				</ul>
@@ -86,9 +87,9 @@
 					</form>
 				</div>
 				<!-- User -->
-				<div class="user"><a href="#"><div><img src="images/user.svg" alt="https://www.flaticon.com/authors/freepik"><div>1</div></div></a></div>
+				<!-- <div class="user"><a href="#"><div><img src="images/user.svg" alt="https://www.flaticon.com/authors/freepik"><div>1</div></div></a></div> -->
 				<!-- Cart -->
-				<div class="cart"><a href="#"><div><img class="svg" src="images/cart.svg" alt="https://www.flaticon.com/authors/freepik"><div class="cart-items">1</div></div></a></div>
+				<div class="cart"><a href="/cart"><div><img class="svg" src="images/cart.svg" alt="https://www.flaticon.com/authors/freepik"><div class="cart-items">1</div></div></a></div>
 				<!-- Phone -->
 				<div class="header_phone d-flex flex-row align-items-center justify-content-start">
 					<div><div><img src="images/phone.svg" alt="https://www.flaticon.com/authors/freepik"></div></div>
@@ -106,12 +107,12 @@
 		<div class="home">
 			<div class="home_container d-flex flex-column align-items-center justify-content-end">
 				<div class="home_content text-center">
-					<div class="home_title">Category Page</div>
+					<div class="home_title">SHOP</div>
 					<div class="breadcrumbs d-flex flex-column align-items-center justify-content-center">
 						<ul class="d-flex flex-row align-items-start justify-content-start text-center">
 							<li><a href="/">Home</a></li>
 							<!-- <li><a href="category.html">Woman</a></li> -->
-							<li>New Products</li>
+							<li>Shop</li>
 						</ul>
 					</div>
 				</div>
@@ -165,40 +166,41 @@
           <!-- Product -->
           <% products.forEach(product =>{ %>
 					<div class="col-xl-4 col-md-6 grid-item new">
-						<div class="product">
-							<div class="product_image"><img src="e-commerce-image-assets/<%= product.product_image %> " alt=""></div>
-							<div class="product_content">
-								<div class="product_info d-flex flex-row align-items-start justify-content-start">
-									<div>
+						<a href="/product">
+							<div class="product">
+								<div class="product_image"><img src="e-commerce-image-assets/<%= product.product_image %> " alt=""></div>
+								<div class="product_content">
+									<div class="product_info d-flex flex-row align-items-start justify-content-start">
 										<div>
-											<div class="product_name"><a href="/product"><%= product.product_tittle %> </a></div>
-											<div class="product_category">In <a href="category.html">Category</a></div>
+											<div>
+												<div class="product_name"><a href="/product"><%= product.product_tittle %> </a></div>
+												<div class="product_category">In <a href="category.html">Category</a></div>
+											</div>
+										</div>
+										<div class="ml-auto text-right">
+											<div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="product_price text-right"><%= product.product_price %> <span>.99</span></div>
 										</div>
 									</div>
-									<div class="ml-auto text-right">
-										<div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="product_price text-right"><%= product.product_price %> <span>.99</span></div>
-									</div>
-								</div>
-								<div class="product_buttons">
-									<div class="text-right d-flex flex-row align-items-start justify-content-start">
-										<div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><img src="images/heart_2.svg" class="svg" alt=""><div>+</div></div></div>
-										</div>
-										<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><img src="images/cart.svg" class="svg" alt=""><div>+</div></div></div>
+									<div class="product_buttons">
+										<div class="text-right d-flex flex-row align-items-start justify-content-start">
+											<div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
+												<div><div><img src="images/heart_2.svg" class="svg" alt=""><div>+</div></div></div>
+											</div>
+											<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
+												<div><div><img src="images/cart.svg" class="svg" alt=""><div>+</div></div></div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 
-					</div>
             <% }) %> 
 
 				</div>
-				<div class="row page_nav_row">
+				<!-- <div class="row page_nav_row">
 					<div class="col">
 						<div class="page_nav">
 							<ul class="d-flex flex-row align-items-start justify-content-center">
@@ -209,7 +211,7 @@
 							</ul>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 

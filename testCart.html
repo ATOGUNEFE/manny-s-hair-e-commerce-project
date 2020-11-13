@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  const products = [
+    {
+      id: 1,
+      name: 'Camera',
+      price: 4500000,
+    },
+    {
+      id: 2,
+      name: 'Camera bag',
+      price: 65000,
+    },
+  ];
+</script>
+<body>
+
+  <h1>My Products</h1>
+  <p>Professional Camera</p>
+  <button onClick="addToCart(JSON.stringify(products[0]))">Add to cart</button>
+  <p>Camera Bag</p>
+  <button onClick="addToCart(JSON.stringify(products[1]))">Add to cart</button>
+  <br><hr>
+  <button onClick="viewCart()">View Cart</button>
+</body>
+<script>
+  const addToCart = (product) => {
+    console.log('adding...', product)
+    const newProduct = JSON.parse(product);
+
+    // Check if cart exists in local storage
+    let cartItems = JSON.parse(localStorage.getItem('cartItems'));
+
+    if (!cartItems) {
+      // cart didn't previously exist. Let's create one
+      cartItems = [];
+    }
+
+    // Now cart exists. Let's go through the items in the cart
+    // And see if this product already exists in there
+
+    let itExists = false;
+    // We can use this variable to remember if the product exists
+    // We would change it to true, whenever we find out that the product exists already
+
+    const newCartList = cartItems.map(product => {
+      if (product.id === newProduct.id) {
+        // product exists. Let's increase the quantity instead
+        itExists = true;
+        const newEditedProduct = {
+          ...product,
+          quantity: product.quantity + 1,
+        }
+        return newEditedProduct;
+      }
+
+      return product;
+    })
+
+    // But if the product didn't exist before now, we can add it here:
+    if (!itExists) {
+      newCartList.push({
+        ...newProduct,
+        quantity: 1,
+      });
+    }
+
+    // New product has now be successfully added.
+    // Now let's replace the list on the localstorage with this updated list
+    localStorage.setItem('cartItems', JSON.stringify(newCartList));
+    // Remember that it has to be stored as a string. So we use JSON.stringify()
+  }
+
+  const viewCart = () => {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+    console.log('items in my cart:', cartItems);
+  }
+  
+</script>
+</html>

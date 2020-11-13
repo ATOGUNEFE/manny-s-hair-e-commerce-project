@@ -381,6 +381,17 @@ section
 	font-weight: 700;
 	color: #4a4a4a;
 }
+
+.logo{
+	width: 30%;
+}
+
+.logo-holder img{
+	width: 100%;
+	height: 60px;
+	object-fit: contain;
+}
+
 .hamburger
 {
 	display: none;
@@ -391,11 +402,11 @@ section
 .hamburger i
 {
 	font-size: 24px;
-	color: #2e2e2e;
+	color:#996959;
 }
 .hamburger:hover i
 {
-	color: #2fce98;
+	color: #996959;
 }
 .main_nav
 {
@@ -414,7 +425,7 @@ section
 .main_nav ul li.active a,
 .main_nav ul li a:hover
 {
-	color: #2fce98;
+	color: #996959;
 }
 .header_search
 {
@@ -445,8 +456,8 @@ section
 .search_input:focus,
 .search_input:hover
 {
-	border-color: #2fce98;
-	box-shadow: 0 0 1px 0px #2fce98 inset, 0 0 1px 0px #2fce98;
+	border-color: #996959;;
+	box-shadow: 0 0 1px 0px #996959 inset, 0 0 1px 0px #996959;;
 }
 .search_input::-webkit-input-placeholder
 {
@@ -517,7 +528,7 @@ section
 	width: 24px;
 	height: 24px;
 	border-radius: 50%;
-	background: #2fce98;
+	background: #996959;;
 	text-align: center;
 	line-height: 24px;
 	color: #FFFFFF;
@@ -563,7 +574,7 @@ section
 .svg:hover rect,
 .svg:hover polygon
 {
-	fill: #2fce98;
+	fill: #996959;;
 }
 
 /*********************************
@@ -606,7 +617,7 @@ section
 }
 .menu_nav ul li a:hover
 {
-	color: #2fce98;
+	color:#996959;;
 }
 .menu_nav ul li a::after
 {
@@ -616,7 +627,7 @@ section
 	left: 0;
 	width: 0%;
 	height: 2px;
-	background: #2fce98;
+	background: #996959;;
 	-webkit-transition: all 400ms ease;
 	-moz-transition: all 400ms ease;
 	-ms-transition: all 400ms ease;
@@ -691,11 +702,11 @@ section
 }
 .menu_social_list li:hover
 {
-	border-color: #2fce98;
+	border-color: #996959;;
 }
 .menu_social_list li:hover a i
 {
-	color: #2fce98;
+	color: #996959;;
 }
 .menu_search
 {
@@ -779,7 +790,7 @@ section
 }
 .breadcrumbs ul li a:hover
 {
-	color: #2fce98;
+	color: #996959;;
 }
 
 /*********************************
@@ -880,7 +891,7 @@ section
 }
 .product_name a:hover
 {
-	color: #2fce98;
+	color: #996959;;
 }
 .product_text
 {
@@ -989,7 +1000,7 @@ section
 }
 .button_continue
 {
-	background: #2fce98;
+	background: #996959;;
 }
 .button_continue:hover
 {
@@ -1063,7 +1074,7 @@ section
 	right: 0;
 	width: 90px;
 	height: 44px;
-	background: #2fce98;
+	background: #996959;
 	border-radius: 3px;
 	color: #FFFFFF;
 	text-transform: uppercase;
@@ -1148,14 +1159,14 @@ section
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
-	background: #2fce98;
+	background: #996959;
 	content: '';
 	visibility: hidden;
 	opacity: 0;
 }
 .radio_container input:checked ~ .radio_mark
 {
-	border-color: #2fce98;
+	border-color: #996959;;
 }
 .radio_container input:checked ~ .radio_mark::after
 {
@@ -1164,7 +1175,7 @@ section
 }
 .radio_container input:checked ~ .radio_text
 {
-	color: #2fce98;
+	color: #996959;;
 }
 .radio_text
 {
@@ -1237,7 +1248,7 @@ section
 	width: 100%;
 	height: 44px;
 	text-align: center;
-	background: #2fce98;
+	background: #996959;;
 	border-radius: 3px;
 	margin-top: 70px;
 }
@@ -1340,7 +1351,7 @@ section
 }
 .footer_list li a:hover
 {
-	color: #2fce98;
+	color: #996959;;
 }
 .footer_list li a > div::after
 {
@@ -1360,7 +1371,7 @@ section
 }
 .footer_list li a:hover > div::after
 {
-	color: #2fce98;
+	color: #996959;;
 }
 .footer_list li a > div
 {
@@ -1387,7 +1398,7 @@ section
 .footer_tag_1
 {
 	left: calc(100% + 5px);
-	background: #2fce98;
+	background:#996959;;
 }
 .footer_tag_2
 {
@@ -1455,7 +1466,7 @@ section
 	width: 53px;
 	height: 53px;
 	border-radius: 50%;
-	background: #2fce98;
+	background:#996959;
 	border: none;
 	outline: none;
 	font-size: 24px;
@@ -1514,12 +1525,12 @@ section
 }
 .footer_social_list li:hover
 {
-	border-color: #2fce98;
+	border-color: #996959;
 	transform: translateY(-5px);
 }
 .footer_social_list li a:hover i
 {
-	color: #2fce98;
+	color: #996959;;
 }
 .footer_bar
 {
@@ -1542,7 +1553,7 @@ section
 }
 .footer_nav ul li a:hover
 {
-	color: #2fce98;
+	color: #996959;;
 }
 .copyright
 {
